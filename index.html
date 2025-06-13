@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire de contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulaire de contact</h1>
+
+  <form id="contactForm">
+    <label>Nom :</label>
+    <input type="text" name="name" required>
+
+    <label>Message :</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <p id="status"></p>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      document.getElementById("status").textContent = "Envoi...";
+
+      const name = this.name.value;
+      const message = this.message.value;
+
+      // Simulation (à remplacer plus tard par un script Telegram ou autre)
+      setTimeout(() => {
+        document.getElementById("status").textContent = "Message envoyé (simulation).";
+        this.reset();
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>
